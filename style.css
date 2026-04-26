@@ -4,8 +4,8 @@ body {
   overflow: hidden;
 }
 #noteless-container { /* Thay bằng ID cái khung note của bạn */
-    opacity: 0.1; /* Khi không dùng, nó sẽ mờ hẳn xuống */
-    filter: blur(12px); /* Thêm một chút blur cho đúng chất Glass */
+    opacity: 0.2; /* Khi không dùng, nó sẽ mờ hẳn xuống */
+    filter: blur(8px); /* Thêm một chút blur cho đúng chất Glass */
     transition: all 0.8s ease-in-out; /* Tốc độ "tỉnh giấc" và "đi ngủ" */
     backdrop-filter: blur(10px);
 }
