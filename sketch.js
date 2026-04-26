@@ -24,8 +24,8 @@ window.addEventListener('mousemove', wakeUp);
 
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
-  // Nhét canvas vào cái thẻ <main> có ID là noteless-container
-  canvas.parent('noteless-container'); 
+  canvas.parent('noteless-container');
+  clear(); // Xóa sạch nền để nó trong suốt
 }
   userInput = localStorage.getItem('noteless_content') || "";
   cursorPos = userInput.length;
@@ -35,7 +35,7 @@ function setup() {
 
 function draw() {
   clear();
-  background(20, 20, 20);
+  background(18, 18, 18, 150);
 
   // Logic nhấn giữ Backspace
   if (keyIsDown(BACKSPACE)) {
