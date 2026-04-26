@@ -3,6 +3,24 @@ let cursorPos = 0;
 let backspaceTimer = 0;
 let padding = 50;
 let charSize = 19.2; // Độ rộng xấp xỉ của 1 ký tự Courier New ở textSize(32)
+let idleTimer;
+const container = document.getElementById('noteless-container');
+
+function wakeUp() {
+    container.classList.add('active');
+    
+    // Xóa bộ đếm cũ nếu bạn vẫn đang gõ
+    clearTimeout(idleTimer);
+    
+    // Thiết lập bộ đếm mới: Sau 3 giây không làm gì sẽ tự mờ đi
+    idleTimer = setTimeout(() => {
+        container.classList.remove('active');
+    }, 3000); 
+}
+
+// Bắt sự kiện gõ phím hoặc di chuyển chuột
+window.addEventListener('keydown', wakeUp);
+window.addEventListener('mousemove', wakeUp);
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
