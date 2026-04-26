@@ -25,6 +25,7 @@ window.addEventListener('mousemove', wakeUp);
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('noteless-container');
+    colorMode(RGB, 255); 
 }
   userInput = localStorage.getItem('noteless_content') || "";
   cursorPos = userInput.length;
@@ -34,7 +35,7 @@ function setup() {
 
 function draw() {
   clear();
-  background(18, 18, 18);
+  background(18, 18, 18, 100);
 
   // Logic nhấn giữ Backspace
   if (keyIsDown(BACKSPACE)) {
