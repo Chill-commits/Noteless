@@ -25,7 +25,6 @@ window.addEventListener('mousemove', wakeUp);
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('noteless-container');
-  clear(); // Xóa sạch nền để nó trong suốt
 }
   userInput = localStorage.getItem('noteless_content') || "";
   cursorPos = userInput.length;
