@@ -34,7 +34,7 @@ function setup() {
 
 function draw() {
   clear();
-  background(18, 18, 18, 150);
+  background(18, 18, 18);
 
   // Logic nhấn giữ Backspace
   if (keyIsDown(BACKSPACE)) {
