@@ -37,7 +37,7 @@ function setup() {
 function draw() {
   clear(); 
   // Để background cực mỏng để thấy được hiệu ứng Blur phía dưới
-  background(18, 18, 18, 150); 
+  background(255, 0, 0); 
 
   // Logic nhấn giữ Backspace
   if (keyIsDown(BACKSPACE)) {
