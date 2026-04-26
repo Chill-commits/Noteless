@@ -38,7 +38,7 @@ function draw() {
   // Code hàm draw bắt đầu từ đây...
   clear(); 
   // Để background cực mỏng để thấy được hiệu ứng Blur phía dưới
-  background(255, 0, 0); 
+  background(18, 18, 18, 150); 
 
   // Logic nhấn giữ Backspace
   if (keyIsDown(BACKSPACE)) {
