@@ -25,17 +25,19 @@ window.addEventListener('mousemove', wakeUp);
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('noteless-container');
-    colorMode(RGB, 255); 
-}
+  colorMode(RGB, 255); 
+  
+  // Khởi tạo các giá trị bên trong setup
   userInput = localStorage.getItem('noteless_content') || "";
   cursorPos = userInput.length;
   textFont('Courier New');
   textSize(32);
-}
+} // Đóng ngoặc đúng chỗ này
 
 function draw() {
-  clear();
-  background(18, 18, 18, 100);
+  clear(); 
+  // Để background cực mỏng để thấy được hiệu ứng Blur phía dưới
+  background(18, 18, 18, 150); 
 
   // Logic nhấn giữ Backspace
   if (keyIsDown(BACKSPACE)) {
