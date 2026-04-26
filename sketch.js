@@ -23,7 +23,10 @@ window.addEventListener('keydown', wakeUp);
 window.addEventListener('mousemove', wakeUp);
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(windowWidth, windowHeight);
+  // Nhét canvas vào cái thẻ <main> có ID là noteless-container
+  canvas.parent('noteless-container'); 
+}
   userInput = localStorage.getItem('noteless_content') || "";
   cursorPos = userInput.length;
   textFont('Courier New');
