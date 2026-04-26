@@ -27,14 +27,15 @@ function setup() {
   canvas.parent('noteless-container');
   colorMode(RGB, 255); 
   
-  // Khởi tạo các giá trị bên trong setup
+  // Các lệnh này PHẢI nằm TRONG dấu ngoặc của hàm setup
   userInput = localStorage.getItem('noteless_content') || "";
   cursorPos = userInput.length;
   textFont('Courier New');
   textSize(32);
-} // Đóng ngoặc đúng chỗ này
+} // <--- Chỉ có DUY NHẤT một dấu đóng ngoặc ở đây sau khi hết các lệnh trên
 
 function draw() {
+  // Code hàm draw bắt đầu từ đây...
   clear(); 
   // Để background cực mỏng để thấy được hiệu ứng Blur phía dưới
   background(255, 0, 0); 
