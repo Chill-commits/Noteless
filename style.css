@@ -1,16 +1,16 @@
 body {
-  background-color: #050505; /* Màu đen nhám như tấm nền VA */
+  background-color: #050505; 
   margin: 0;
   overflow: hidden;
 }
-#noteless-container { /* Thay bằng ID cái khung note của bạn */
-    opacity: 0.2; /* Khi không dùng, nó sẽ mờ hẳn xuống */
-    filter: blur(8px); /* Thêm một chút blur cho đúng chất Glass */
-    transition: all 0.8s ease-in-out; /* Tốc độ "tỉnh giấc" và "đi ngủ" */
+#noteless-container { 
+    opacity: 0.2; 
+    filter: blur(8px); 
+    transition: all 0.8s ease-in-out; 
     backdrop-filter: blur(10px);
 }
 
 #noteless-container.active {
-    opacity: 1.0; /* Hiện rõ nét khi đang gõ */
+    opacity: 1.0; 
     filter: blur(0px);
 }
